@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:test_2/appetizer%20page.dart';
 import 'package:test_2/soup%20page.dart';
+import 'package:test_2/soup%20two%20page.dart';
 
-// void main() {
-//   runApp(MaterialApp(
-//     home: Scaffold(
-//       appBar: AppBar(
-//         title: Text('Layered Background Example'),
-//       ),
-//       body: LayeredBackground(),
-//     ),
-//   ));
-// }
+
 
 class LayeredbackgroundPage extends StatelessWidget {
   @override
@@ -73,16 +66,10 @@ class LayeredbackgroundPage extends StatelessWidget {
                     SizedBox(
                       width: 180,
                     ),
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> FirstmenuPage()));
-
-                      },
-                      child: Image(
-                        image: AssetImage('images/bell.png'),
-                        height: 21,
-                        width: 19,
-                      ),
+                    Image(
+                      image: AssetImage('images/bell.png'),
+                      height: 21,
+                      width: 19,
                     ),
                   ],
                 ),
@@ -108,20 +95,38 @@ class LayeredbackgroundPage extends StatelessWidget {
                     // mainAxisSpacing: 10.0,
                     // crossAxisSpacing: 10.0,
                     children: [
-                      Image(
-                        image: AssetImage('images/food 1.png'),
-                        // height: 230,
-                        // width: 180,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=> FirstmenuPage()));
+
+                        },
+                        child: Image(
+                          image: AssetImage('images/food 1.png'),
+                          // height: 230,
+                          // width: 180,
+                        ),
                       ),
-                      Image(
-                        image: AssetImage('images/food 2.png'),
-                        // height: 230,
-                        // width: 180,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=> ThirdmenuPage()));
+
+                        },
+                        child: Image(
+                          image: AssetImage('images/food 2.png'),
+                          // height: 230,
+                          // width: 180,
+                        ),
                       ),
-                      Image(
-                        image: AssetImage('images/food 3.png'),
-                        // height: 230,
-                        // width: 180,
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context)=> SecondmenuPage()));
+
+                        },
+                        child: Image(
+                          image: AssetImage('images/food 3.png'),
+                          // height: 230,
+                          // width: 180,
+                        ),
                       ),
                       Image(
                         image: AssetImage('images/food 4.png'),
@@ -179,53 +184,3 @@ class LayeredbackgroundPage extends StatelessWidget {
     );
   }
 }
-// Widget build(BuildContext context) {
-//   return Scaffold(
-//     body: Stack(
-//     children: <Widget>[
-//       // Base background
-//       Container(
-//         height: 500,
-//          color: Colors.blue,
-//       ),
-//       Container(
-//         alignment: Alignment.bottomCenter,
-//
-//         height: 300,
-//          // Set the background color of the container
-//
-//         // You can also use BoxDecoration to define additional decorations, such as borders or gradients.
-//         decoration: BoxDecoration(
-//           color: Colors.black,
-//           border: Border.all(
-//             color: Colors.red,
-//             width: 1.0,
-//           ),
-//           borderRadius: BorderRadius.circular(20.0),
-//         ),),
-//         // Base background color
-//
-//       // Top background
-//       // Container(
-//       //   height: 150.0,
-//       //   decoration: BoxDecoration(
-//       //     border: Border.all(
-//       //       width: 1.0,
-//       //     ),
-//       //     borderRadius:BorderRadius.circular(20.0,
-//       //     ),
-//       //   ),
-//       //   // color: Colors.black, // Semi-transparent black background on top
-//       // ),
-//       // // You can add more widgets on top of the background, such as text, images, buttons, etc.
-//       Center(
-//         child: Text(
-//           'Layered Background',
-//           style: TextStyle(
-//             fontSize: 30,
-//             color: Colors.white,
-//           ),
-//         ),
-//       ),
-//       ],
-//         ));
